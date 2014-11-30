@@ -1,0 +1,11 @@
+all: main
+
+main:  main.o array.o
+	g++ main.o array.o -o arrayimpl
+main.o: main.cpp list.h
+	g++ -c main.cpp 
+array.o: array.cpp list.h
+	g++ -c array.cpp
+
+	
+		
